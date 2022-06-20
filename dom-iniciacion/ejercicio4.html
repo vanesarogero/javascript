@@ -15,38 +15,20 @@
   <script> // no se donde agregar el style.color= red style.color= green
     let nombre = window.prompt ("escribe tu nombre")
     let edad = window.prompt ("que edad tienes")
-    let div= document.createElement ("div")
     let newP= document.createElement("p")
-    let newP2= document.createElement("p")
     
 
     edad>=18 //escribir parrafos 
 
-    ? newP.innerHTML= <p>('Hola'  ${+ nombre} 'eres mayor de 18 años')</p>
-    document.getElementById("div").appendChild(newP).style.color="green" 
+    ? newP.innerHTML= `Hola  ${+ nombre} eres mayor de 18 años`,style.color="green" 
+    document.getElementById("div").appendChild(newP).
  
       
-    : newP2.innerHTMLstyle.color= red= <p>('Hola' ${+ nombre} 'eres menor de 18 años')</p>
-    document.getElementById("div").appendChild(newP2).style.color="red" 
- 
-    
-    if (edad>=18) {// escribir parrafo donde enseñar esto
-      newP.innerHTML=<p> hola, {+ nombre} eres mayor de edad</p>
-    } 
-    else{
-      newP2.innerHTML=<p>hola, {+ nombre} eres menor de edad</p>
-    }
-    switch (edad) {
-      case (edad>=18):
-         newP.innerHTML=<p> hola, {+ nombre} eres mayor de edad</p>
-      case (edad<18):
-      newP2.innerHTML=<p>hola, {+ nombre} eres menor de edad</p>
-          
-               
-    }
+    : newP.innerHTMLstyle.color= red= Hola ${+ nombre} `eres menor de 18 años,` style.color="red"
+    document.getElementById("div").appendChild(newP). 
+
     document.body.appendChild(newP)
-
-
+ 
     
 </script>
 

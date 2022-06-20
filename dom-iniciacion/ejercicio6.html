@@ -22,24 +22,24 @@
       let operacion= parseInt(window.prompt ("Dime que operación de deseas, Suma= 0, resta=1, multiplicacion=2, Division=3, resto=4"))
       let num1= parseInt(window.prompt("dame un número con el que operar"))
       let num2=parseInt(window.prompt ("dame otro número con el que operar"))
-      let div= document.createElement.("div")
+      let respuesta= document.createElement.("p")
       
       switch (operacion) {
-        case operacion=0:
-          div.innerHTML= <p> ${num1+num2} </p>
-        case operacion=1:
-          div.innerHTML= <p> ${num1-num2} </p>
-        case operacion=2:
-          div.innerHTML= <p> ${num1*num2} </p>
-        case operacion=3:
-          div.innerHTML= <p> ${num1/num2} </p>
-        case operacion=4:
-          div.innerHTML= <p> ${num1%num2} </p>
-        document.body.appendChild ('div')
+        case 0:
+          respuesta.innertext= `la suma es ${num1+num2}`
+        case 1:
+          respuesta.innertext= `la resta es ${num1-num2}`
+        case 2:
+        respuesta.innertext= `la multiplicacion es ${num1*num2}`
+        case 3:
+        respuesta.innertext= `la division es ${num1/num2}`
+        case 4:
+        respuesta.innertext= `El resto es ${num1%num2}`
+        document.body.appendChild (respuesta)
             break;
       
         default: 
-        newDiv.innerHTML= <p> Lo lamento, pero no has introducido un número válido, no puedo operar así</p>
+        newDiv.innerHTML=  'Lo lamento, pero no has introducido un número válido, no puedo operar así'
           break;
       }
       

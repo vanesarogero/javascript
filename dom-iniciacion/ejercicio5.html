@@ -19,19 +19,39 @@
      
       let num1= parseInt(window.prompt ("dame un número con el que operar"))
       let num2= parseInt(window.prompt ("dame otro número con el que operar"))
-      let div= document.createElement.("div")
-        div.innerHTML= <p> ${num1+num2} </p>
-        document.body.appendChild ('div')
-        div.innerHTML= <p> ${num1-num2} </p>
-        document.body.appendChild ('div')
-        div.innerHTML= <p> ${num1*num2} </p>
-        document.body.appendChild ('div')
-        div.innerHTML= <p> ${num1/num2} </p>
-        document.body.appendChild ('div')
-        div.innerHTML= <p> ${num1%num2} </p>
-        document.body.appendChild ('div')
+      let p1= document.createElement("p")
+      let p2= document.createElement("p")
+      let p3= document.createElement("p")
+      let p4= document.createElement("p")
+      let p5= document.createElement("p")
+
+      
+        p1.innertext=  `${num1+num2}`
+        p1.style.backgroundColor =`green`
+        p1.style.color=`white`
+        
+        p2.innertext=  `${num1-num2}`
+        p2.style.backgroundColor =`green`
+        p2.style.color=`white`
+
+        p3.innertext=  `${num1*num2}`
+        p3.style.backgroundColor =`green`
+        p3.style.color=`white`
+
+        p4.innertext=  `${num1/num2}`
+        p4.style.backgroundColor =`green`
+        p4.style.color=`white`
+
+        p5.innertext=  `${num1%num2}`
+        p5.style.backgroundColor =`green`
+        p5.style.color=`white`
            
-      }
+      document.body.appendChild(p1)
+      document.body.appendChild(p2)
+      document.body.appendChild(p3)
+      document.body.appendChild(p4)
+      document.body.appendChild(p5)
+       
        
       
       
