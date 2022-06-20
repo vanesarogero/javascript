@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ejercicio 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+<style>
+
+</style>
+</head>
+<body>
+  
+  <script> //¿cómo almacenar a informacion del usuario sin windowpromt o windowalert, array??
+      let nombre = window.prompt ("escribe tu nombre")
+      let edad = window.prompt ("que edad tienes")
+      let newP= document.createElement("p")
+      
+
+      edad>=18 //escribir parrafos 
+      ? newP.innerHTML= <p>('Hola'  ${+ nombre} 'eres mayor de 18 años')</p>
+      : newP.innerHTML= <p>('Hola' ${+ nombre} 'eres menor de 18 años')</p>
+
+      if (edad>=18) {// escribir parrafo donde enseñar esto
+        newP.innerHTML=<p> hola, {+ nombre} eres menor de edad</p>
+      } 
+      else{
+        newP.innerHTML=<p>hola, {+ nombre} eres menor de edad</p>
+      }
+      switch (edad) {
+        case (edad>=18):
+           newP.innerHTML=<p> hola, {+ nombre} eres menor de edad</p>
+        case (edad<18):
+        newP.innerHTML=<p>hola, {+ nombre} eres menor de edad</p>
+            
+                 
+      }
+    document.body.appendChild(newP)
+
+
+
+      
+  </script>
+
+
+ 
+</body>
+</html>

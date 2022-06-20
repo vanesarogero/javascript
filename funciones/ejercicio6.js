@@ -15,7 +15,7 @@ window.alert (dividirnum)
 
 do {
     
-} while (a=0);
+} while (num2=0);
 
 function dividir(params) {
     return dividirnum =num1/num2

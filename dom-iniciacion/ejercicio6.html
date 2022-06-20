@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ejercicio 6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+<style>
+
+</style>
+</head>
+<body>
+
+  
+
+  <script>
+    //Crea un programa que te pregunte qué operación deseas realizar (Suma, Resta,
+  //Multiplicación, División y Resto). Después te pedirá dos números y aparecerán los
+  //dos números introducidos y el resultado de la operación de forma visual.
+
+      let operacion= parseInt(window.prompt ("Dime que operación de deseas, Suma= 0, resta=1, multiplicacion=2, Division=3, resto=4"))
+      let num1= parseInt(window.prompt("dame un número con el que operar"))
+      let num2=parseInt(window.prompt ("dame otro número con el que operar"))
+      let div= document.createElement.("div")
+      
+      switch (operacion) {
+        case operacion=0:
+          div.innerHTML= <p> ${num1+num2} </p>
+        case operacion=1:
+          div.innerHTML= <p> ${num1-num2} </p>
+        case operacion=2:
+          div.innerHTML= <p> ${num1*num2} </p>
+        case operacion=3:
+          div.innerHTML= <p> ${num1/num2} </p>
+        case operacion=4:
+          div.innerHTML= <p> ${num1%num2} </p>
+        document.body.appendChild ('div')
+            break;
+      
+        default: 
+        newDiv.innerHTML= <p> Lo lamento, pero no has introducido un número válido, no puedo operar así</p>
+          break;
+      }
+      
+  </script>
+
+
+ 
+</body>
+</html>

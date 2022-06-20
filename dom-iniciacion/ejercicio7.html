@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ejercicio 7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+<style>
+
+</style>
+</head>
+<header>
+
+</header>
+<body>
+  
+  <script>
+     //Para crear un enlace en Javascript, lo haremos de la siguiente forma: 
+     //function init() { let a = document. createElement("a"); a. setAttribute("href", "http://www.google.es"); let aTexto = document.
+     /*El código HTML sería: <a href=»#primerp»>Ir al inicio de este artículo</a>. La etiqueta <a href> inserta un enlace que hemos 
+      llamado «Ir al inicio…» y cada vez que alguien lo clique lo llevará al lugar de la página que le hemos indicado, en este caso, al <p> denominado «primerp».*/
+    let newA1= document.createElement("a")
+      newA1.innerHTML= <a href= #div1»> esto es un enlace a nuestro primer div </a>;
+      document.header.appendChild(newA1);
+    let div1= document.createElement("div")
+      div1.innerHTML= <div id=primero> esto es un enlace a nuestro enlace del header </div>
+      document.body.appendChild(div1)
+
+      document.getElementById('primero').innerHTML=<p> parrafo</p>
+
+
+    let newA2= document.createElement("a")
+      newA2.innerHTML= <a id=enlace href= #div2»> esto es un enlace a nuestro segundo div </a>
+      document.header.appendChild(newA2)
+    let div2= document.createElement("div")
+      div2.innerHTML= <div id=segundo> esto es mi segundo div </div>
+      document.body.appendChild(newA2)
+      document.getElementById('segundo').innerHTML=<p> parrafo2</p>
+       
+    let newA3= document.createElement("a")
+      newA3.innerHTML= <a href= #div3»> esto es un enlace a nuestro tercer div </a>
+      document.header.appendChild(newA3)
+    let div3= document.createElement("div")
+      div3.innerHTML= <div id=tercero> esto es mi tercer div </div>
+      document.body.appendChild(newA2)
+      document.getElementById('tercero').innerHTML=<p> parrafo3</p>
+
+      let newA4= document.createElement("a")
+      newA4.innerHTML= <a href=#enlace»> esto es un enlace a nuestro header </a>
+      document.footer.appendChild(newA4)
+
+      //no se como conectar el footer con el header
+
+
+
+       
+      
+  </script>
+
+<footer>
+
+</footer>
+ 
+</body>
+</html>
