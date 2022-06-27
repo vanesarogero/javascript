@@ -1,6 +1,8 @@
 do{
-    let numero = parseint(windowprompt("introduce un número"))
-    for (let i=1; i<=numero; i++)
+    let numero = parseint(windowprompt("introduce un número"))10
+      
+    
+    for (let i=1; i<=numero (10); i++)
     suma+=i
 
 }
