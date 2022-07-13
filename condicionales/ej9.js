@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>ejercicio 9</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-
-<style>
-
-</style>
-</head>
-<body>
-  <p>hola</p>
-  <p>como</p>
-  <p>estas</p>
-  
-  <script>
-     
-      let temp =parseInt (window.prompt ("¿qué temperatura hace?"))
+/*Un programa que te pregunta la temperatura que hace donde estás y te sugiere qué
+hacer dependiendo de ella. Las recomendaciones son:
+a. Si hace más de 40 grados, vete a otro sitio
+b. Entre 30 y 40 grados, enciende el aire acondicionado
+c. Entre 30 y 20 grados, no hagas nada 
+d.Entre 10 y 20 grados, enciende la calefacción
+e. Si hace menos de 10 grados, vete a otro sitio
+*/
+let temp =parseInt (window.prompt ("¿qué temperatura hace?"))
       switch (temp){
         case temp>40: 
          console.log ("Vete a otro sitio")
@@ -35,7 +24,3 @@
         console.log ("vete a otro sitio")
         break;    
       } 
-  </script>
-
-</body>
-</html>
