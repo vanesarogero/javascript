@@ -11,3 +11,17 @@ function name(num1,num2) {
 
     
 }
+//solucion
+let nu1 = parseInt(window.prompt('Introduce un número:'))
+let nu2 = parseInt(window.prompt('Introduce otro número:'))
+let nu3 = 0
+
+suma(nu1,nu2)
+
+console.log(nu3)
+
+
+
+function suma(arg1,arg2){
+   nu3=arg1+arg2    
+}

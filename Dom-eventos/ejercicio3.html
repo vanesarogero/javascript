@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentacion Maria Luisa</title>
+    <style>
+        #container {
+            display: flex;
+           
+            
+        }
+        #cesta {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <head><h1> Alimentación ALFONSO</h1></head>
+    <main>
+        <div id ="container">
+            <div>
+                <h2> <img src="iconos/carne.png" width="50px" />CARNE: 7.25€</h2>
+                <button type="button" onclick="modificar('+', 'carne')">+</button>
+                <button type="button" onclick="modificar('-', 'carne')">-</button>
+            </div>
+            <div>
+                <h2> <img src="iconos/manzana.png" width="50px" />MANZANA: 1.50€</h2>
+                <button type="button" onclick="modificar('+', 'manzana')">+</button>
+                <button type="button" onclick="modificar('-', 'manzana')">-</button>
+            </div>
+            <div>
+                <h2><img src="iconos/leche.png" width="50px" /> LECHE: 1.49€</h2>
+                <button type="button" onclick="modificar('+', 'leche')">+</button>
+                <button type="button" onclick="modificar('-', 'leche')">-</button>
+            </div>
+            <div>
+                <h2><img src="iconos/pescado.png" width="50px" />PESCADO: 6.95€</h2>
+                <button type="button" onclick="modificar('+', 'pescado')">+</button>
+                <button type="button" onclick="modificar('-', 'pescado')">-</button>
+            </div>
+        </div>
+        <div>
+            <h2>Cesta:</h2>
+            <div id="cesta"></div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>2022© Alimentación Maria Luisa.  </p>
+    </footer>
+
+    <script src ="Ej-3.js"></script>
+    
+</body>
+</html>

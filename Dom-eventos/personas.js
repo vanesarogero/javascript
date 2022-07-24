@@ -1120,3 +1120,118 @@ let personas = [
     nat: 'FI',
   },
 ]
+
+let personasFinal = []
+
+for (let i = 0; i< personas.length; i++) {
+  personasFinal.push({
+      nombre: personas[i].name.first,
+      imagen: personas[i].picture.thumbnail,
+      edad: personas[i].dob.age,
+      telefono: personas[i].cell,
+      usuario: personas[i].login.username,
+      pais: personas[i].location.country
+  })
+  
+}
+
+let respuesta = document.createElement('div')
+respuesta.setAttribute('id', 'respuesta') // con setAttribute añadimos un id (o una class) y al lado el valor de ese id (o de la class)
+document.body.appendChild(respuesta)
+respuesta = document.getElementById('respuesta') // reutilizamos la variable respuesta, porque una vez colgada del DOM ya no la necesitamos
+
+// 1. Mostramos una card con la primera persona del array
+
+respuesta.innerHTML = `<div id = "${personasFinal[0]}" class ="card">
+<h3>${personasFinal[0].nombre}</h3>
+<img src ="${personasFinal[0].imagen}" alt = "${personasFinal[0].nombre}"></img>
+<p>Edad: ${personasFinal[0].edad}</p>
+<p>Teléfono: ${personasFinal[0].telefono}</p>
+<p>Usuario: ${personasFinal[0].usuario}</p>
+<p>País: ${personasFinal[0].pais}</p>  
+</div>`
+
+
+//2. Usuario introduce un numero y si es un índice válido de nuestro array, mostrar info de la persona, si no, mostrar error.
+
+let indice = parseInt(window.prompt('Introduce un índice:'))
+
+if (indice >= 0 && indice < personasFinal.length){
+respuesta.innerHTML = `<div id = "${personasFinal[indice]}" class = "card">
+<h3>${personasFinal[indice].nombre}</h3>
+<img src ="${personasFinal[indice].imagen}" alt = "${personasFinal[indice].nombre}"></img>
+<p>Edad: ${personasFinal[indice].edad}</p>
+<p>Teléfono: ${personasFinal[indice].telefono}</p>
+<p>Usuario: ${personasFinal[indice].usuario}</p>
+<p>País: ${personasFinal[indice].pais}</p>
+</div>`
+} else {
+respuesta.innerHTML = `<p> Índice NO válido. No se encuentra en el rango </>`
+
+}
+
+
+// SOLUCION DE CLASE: 3. Pide al usuario un texto y muestra las cards de todas las personas cuyo nombre contenga ese texto.
+
+let texto = window.prompt('Introduce un texto:')
+let impresion =''
+
+for (let i = 0; i < personasFinal.length; i++) { 
+if(personasFinal[i].nombre.includes(texto)){ // el metodo includes consiste en pasarle un string y prefuntarle: 'Esto que está delante de ti (personasFinal[i].nombre incluye lo que te paso por el argumento (texto))
+  impresion += `<div id = "${personasFinal[i]}" class = "card">
+  <h3>${personasFinal[i].nombre}</h3>
+  <img src ="${personasFinal[i].imagen}" alt = "${personasFinal[i].nombre}"></img>
+  <p>Edad: ${personasFinal[i].edad}</p>
+  <p>Teléfono: ${personasFinal[i].telefono}</p>
+  <p>Usuario: ${personasFinal[i].usuario}</p>
+  <p>País: ${personasFinal[i].pais}</p>
+  </div>`
+} 
+
+}
+respuesta.innerHTML = impresion
+
+
+// SOLUCION DE CLASE: 4. La página de carga solo muestra un imput de texto y un botón. Al hacer click en el se mostrarán todas las personas cuyo texto contenga en su nombre. Si no hubiera ningún texto en el input, se mostrarán todas las cards.
+
+let input =''
+
+if(input === '') {
+for (let i = 0; i < personasFinal.length; i++) { 
+   impresion += `<div id = "${personasFinal[i]}" class = "card">
+   <h3>${personasFinal[i].nombre}</h3>
+   <img src ="${personasFinal[i].imagen}" alt = "${personasFinal[i].nombre}"></img>
+   <p>Edad: ${personasFinal[i].edad}</p>
+   <p>Teléfono: ${personasFinal[i].telefono}</p>
+   <p>Usuario: ${personasFinal[i].usuario}</p>
+   <p>País: ${personasFinal[i].pais}</p>
+   </div>`
+   respuesta.innerHTML = impresion
+}
+}
+
+
+function buscar(){
+for (let i = 0; i < personasFinal.length; i++) { 
+  if(personasFinal[i].nombre.includes(input)){ 
+     impresion += `<div id = "${personasFinal[i]}" class = "card">
+     <h3>${personasFinal[i].nombre}</h3>
+     <img src ="${personasFinal[i].imagen}" alt = "${personasFinal[i].nombre}"></img>
+     <p>Edad: ${personasFinal[i].edad}</p>
+     <p>Teléfono: ${personasFinal[i].telefono}</p>
+     <p>Usuario: ${personasFinal[i].usuario}</p>
+     <p>País: ${personasFinal[i].pais}</p>
+     </div>`
+  }
+}
+respuesta.innerHTML = impresion
+}
+   
+ 
+
+
+function actualizar(event){
+input = event.target.value
+
+} 
+

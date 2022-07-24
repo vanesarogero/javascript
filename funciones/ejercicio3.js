@@ -9,3 +9,9 @@ function name(arg1, arg2) {
    return 
 }
 
+//solucion
+console.log(sumaFuncion(3,4))
+
+function sumaFuncion(arg1, arg2) {
+    return arg1 + arg2
+}

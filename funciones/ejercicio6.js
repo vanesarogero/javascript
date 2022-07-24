@@ -20,3 +20,23 @@ do {
 function dividir(params) {
     return dividirnum =num1/num2
 }
+
+//solucion
+
+let nu1 = 0
+let nu2 = 0
+
+do { 
+    let nu1 = parseInt(window.prompt('Introduce un número:'))
+    let nu2 = parseInt(window.prompt('Introduce otro número:'))
+    if (nu2 !== 0){
+window.alert(divide(nu1,nu2))
+    }
+
+} while (nu2 !== 0)
+
+
+function divide(arg1,arg2) {
+    return (arg1/arg2)
+     
+}

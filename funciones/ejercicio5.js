@@ -15,3 +15,19 @@ names(num1, num2)
 function names(agr1, agr2) {
    return agr1>agr2 ? true : false
 }
+
+
+//solucion
+let nu1 = parseInt(window.prompt('Introduce un número:'))
+let nu2 = parseInt(window.prompt('Introduce otro número:'))
+
+esMayor(nu1,nu2)
+?console.log('El primer número es más grande')
+:console.log('El primer número NO es más grande')
+
+
+
+function esMayor(arg1,arg2){
+    return arg1 > arg2 ? true : false
+
+}
